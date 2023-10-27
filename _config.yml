@@ -20,17 +20,17 @@
 
 title: Gazette
 email: alighanem99@live.com
-description: My inscriptions
+description: some notes
 domain: alialiusefi.github.io
 baseurl: ""
 url: https://alialiusefi.github.io
-twitter_username: na
 github_username:  alialiusefi
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
