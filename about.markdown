@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-Notes, Thoughts and Info
+notes, thoughts & info
