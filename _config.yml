@@ -27,12 +27,13 @@ url: https://alialiusefi.github.io
 github_username:  alialiusefi
 
 # Build settings
-theme: minima
+remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
   - jekyll-seo-tag
-  - jekyll-analytics
 
+google_analytics: G-XQLCM9DGNS
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -52,9 +53,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-jekyll_analytics:
-  GoogleAnalytics:          # Add, if you want to track with Google Analytics
-    id: G-5DB07RWVYF          # Required - replace with your tracking id
-    anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
-
