@@ -10,7 +10,7 @@ tags:
   - performance
 ---
 
-When extracting data from a service that generates a lot of data - the amount of work needed to then maintain the stored data starts to compound. Bottlenecks will prevent scaling and loss of revenue may occur, so to mitigate this issue, it is good to ask ourselves the following questions:
+When extracting data from a third party api service that generates a lot of data - the amount of work needed to then maintain the stored data starts to compound. Bottlenecks will prevent scaling and loss of revenue may occur, so to mitigate this issue, it is good to ask ourselves the following questions:
 
 - In the context of a business domain, Do we really need to treat all data the same? 
 
