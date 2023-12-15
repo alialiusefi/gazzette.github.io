@@ -34,6 +34,7 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 include:
   - _pages
 
+google_site_verification: "tJGKKVJ9QOfrjZaAH6U4uzmMKmM0UGEV_nLZT4pAiYE"
 analytics:
   provider: "google-gtag"
   google:
