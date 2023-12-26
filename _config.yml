@@ -13,6 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+# Useful link: https://mmistakes.github.io/minimal-mistakes/docs/configuration
+
 title: MilkTea
 email:
 description: >- # this means to ignore newlines until "baseurl:"
@@ -39,6 +41,11 @@ analytics:
   provider: "google-gtag"
   google:
     tracking_id: "G-XQLCM9DGNS"
+
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "alialiusefi-github-io"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

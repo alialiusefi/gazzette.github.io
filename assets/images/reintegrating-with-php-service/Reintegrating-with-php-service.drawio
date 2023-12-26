@@ -1,0 +1,36 @@
+<mxfile host="app.diagrams.net" modified="2023-12-24T09:48:54.589Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0" etag="9H2B1NNvva7sdoLmFXYM" version="22.1.11" type="device">
+  <diagram name="Page-1" id="T_lZdNIDErgg7jXjjbQq">
+    <mxGraphModel dx="1242" dy="711" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="J50L2D8Asl_RP4Ov8Aft-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J50L2D8Asl_RP4Ov8Aft-4" target="J50L2D8Asl_RP4Ov8Aft-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J50L2D8Asl_RP4Ov8Aft-4" value="PHP Service" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="283.5" y="120" width="76.5" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="J50L2D8Asl_RP4Ov8Aft-7" value="Event Enricher" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="300" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="J50L2D8Asl_RP4Ov8Aft-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J50L2D8Asl_RP4Ov8Aft-9" target="J50L2D8Asl_RP4Ov8Aft-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J50L2D8Asl_RP4Ov8Aft-9" value="&lt;div&gt;Business Logic Computations&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="410" y="300" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="J50L2D8Asl_RP4Ov8Aft-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="J50L2D8Asl_RP4Ov8Aft-7" target="J50L2D8Asl_RP4Ov8Aft-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J50L2D8Asl_RP4Ov8Aft-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="J50L2D8Asl_RP4Ov8Aft-14" target="J50L2D8Asl_RP4Ov8Aft-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J50L2D8Asl_RP4Ov8Aft-14" value="Aggregator" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="520" y="141.5" width="50" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
