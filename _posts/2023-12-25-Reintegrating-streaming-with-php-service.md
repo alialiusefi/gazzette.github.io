@@ -28,7 +28,7 @@ In the context of this post, two components are important here:
 1. Aggregator
     1. This is a service that consumes events concurrently from a stream and aggregates them into a single result event.
 2. PHP Service
-    1. This is a big php service that consists of multiple web requests handler and cron jobs. Note that this service was not performing well, and cron php instances were using infinite loops 😣. It performed badly under high load and was being replaced soon.
+    1. This is a big php service that consists of multiple web requests handler and cron jobs. Note that this service was not performing well. It performed badly under high load and was being replaced soon.
 
 The communication between ‘Aggregator’ and ‘PHP Service’ happens synchronously by calling the http endpoint of the php service to ‘pass’ the event to it.
 If the call timeouts, we retry a couple of times (the max was 3).
