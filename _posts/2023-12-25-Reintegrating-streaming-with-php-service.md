@@ -39,8 +39,8 @@ The issue here is that the php service was not able to handle all requests and w
 
 When calling the ‘php service’ for every event, we expect a reply instantly, which makes this communication style fragile when it fails, and puts an expectation for the php service to have high availablity which was not possible due to its bad performance.
 
-Async communication is instead applied with help of a FIFO queue. Instead of expecting the php service to perform, we give it a chance to work on its own pace.
-Since our cloud provider did not provide the stream consumer api for PHP, I instead used the alternative option which we already use - queues’.
+Async communication is instead applied with help of a FIFO queue. That way, instead of expecting the php service to perform, we give it a chance to work on its own pace.
+Since our cloud provider did not provide the stream consumer api for PHP, I instead used the alternative option which we already use - queues.
 
 Using partitioning, It is possible to order events in a distributed manner and also retry the failed events. This allows to unblock events that are not related to each other.
 ￼
