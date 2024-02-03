@@ -1,5 +1,5 @@
 ---
-title: "Reintegrating streaming with php service"
+title: "Reintegrating streaming with php legacy service"
 excerpt_separator: "<!--more-->"
 categories:
   - Blog
