@@ -3,18 +3,20 @@ title: "Introducing observability with prometheus"
 excerpt_separator: "<!--more-->"
 categories:
   - Blog
+toc: true
 tags:
   - observability
   - metrics
   - prometheus
   - postgres
+  - docker
 ---
 
 Using open source observability tools like prometheus, it is convenient to track and understand how your application performs, especially if cloud providers provide these metrics as a paid service or you are looking for a specific business metric.
 
 ## Introduction
 
-Prometheus - is an open source tool developed by a well known foundation called CNCF(https://www.cncf.io/), that provides open source cloud tools. The same people who developed kubernetes!
+Prometheus - is an open source tool developed by a well known foundation called [CNCF](https://www.cncf.io/), that provides open source cloud tools. The same people who developed kubernetes!
 
 Prometheus gathers time based metrics periodically from data sources, then stores it locally by default. It is written in GO language and performs quite well. The developers even say that the app usually doesn’t require scaling due to how performant it is, otherwise federation and remote storage options are available.
 
@@ -25,6 +27,7 @@ Alerting is also one feature that I will discuss about later, but it basically a
 
 To configure your prometheus instance, we can start by defining a YAML file:
 
+### prometheus.yml
 ```
 global:
   scrape_interval: 15s
@@ -37,12 +40,11 @@ scrape_configs:
 
 Let’s imagine you would like to monitor your postgres db. We define a ‘job’ that will scrape data from ‘targets’. Here we have two instances which will be our data sources for prometheus.
 
-postgres_exporter(https://github.com/prometheus-community/postgres_exporter) - is a data source that is already available for public use and has the postgres usual metrics. 
+[postgres_exporter](https://github.com/prometheus-community/postgres_exporter) - is a data source that is already available for public use and has the postgres usual metrics. 
 
-sql_exporter(https://github.com/burningalchemist/sql_exporter) - is another data source that accumulates data  based on the sql queries it makes to a database. Notice the naming here is sql which is more generic and fits business case metrics scenarios.
+[sql_exporter](https://github.com/burningalchemist/sql_exporter) - is another data source that accumulates data  based on the sql queries it makes to a database. Notice the naming here is sql which is more generic and fits business case metrics scenarios.
 
-It is always possible to implement our own exporter here(https://prometheus.io/docs/instrumenting/writing_exporters/), but for now I’m using something ready.
-
+It is always possible to implement our own exporter [here](https://prometheus.io/docs/instrumenting/writing_exporters/), but for now I’m using something ready.
 
 For simplicity purpose I used docker-compose to run the instances and setting it up:
 
@@ -101,9 +103,9 @@ Diagram that explains the architecture:
 
 ## Querying metrics
 
-After setting up your instances, and prometheus is able to scrape metrics successfully, you can finally start querying:
+After setting up your instances, and prometheus is able to scrape metrics successfully, you can finally start querying by accessing the web ui, on the port you configured.
 
-Example 1:
+### Example 1:
 
 Querying a metric starts from the metric name then we pass the labels to narrow down the values we are interested in: 
 
@@ -118,7 +120,9 @@ The graph representation since last 6 hours:
 
 ![example-1-2](/assets/images/introducing-observability-with-prometheus/introducing-observability-with-prometheus-example1-2.png)
 
-Example 2:
+Notice how some metrics is missing when usual metric scrapping flow doesn’t work.
+
+### Example 2:
 
 Querying pg_stat_user_tables_last_autovacuum to know when was the last auto vacuum was run:
 
