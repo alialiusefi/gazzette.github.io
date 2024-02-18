@@ -99,7 +99,7 @@ postgres_exporter and sql_exporter are both apps written in GO that periodically
 
 Diagram that explains the architecture:
 
-![diagram](/assets/images/introducing-observability-with-prometheus/introducing-observability-with-prometheus-architecture.drawio.png)
+[![diagram](/assets/images/introducing-observability-with-prometheus/introducing-observability-with-prometheus-architecture.drawio.png)](/assets/images/introducing-observability-with-prometheus/introducing-observability-with-prometheus-architecture.drawio.png)
 
 ## Querying metrics
 
@@ -114,20 +114,22 @@ pg_stat_database_tup_returned{datid="5", datname="postgres", instance="postgres_
 ```
 As the name might suggest, it returns the total tuples fetched with database name ‘postgres’, at this current moment. 
 
-![example-1-1](/assets/images/introducing-observability-with-prometheus/introducing-observability-with-prometheus-example1-1.png)
+[![example-1-1](/assets/images/introducing-observability-with-prometheus/introducing-observability-with-prometheus-example1-1.png)](/assets/images/introducing-observability-with-prometheus/introducing-observability-with-prometheus-example1-1.png)
 
 The graph representation since last 6 hours:
 
-![example-1-2](/assets/images/introducing-observability-with-prometheus/introducing-observability-with-prometheus-example1-2.png)
+[![example-1-2](/assets/images/introducing-observability-with-prometheus/introducing-observability-with-prometheus-example1-2.png)](/assets/images/introducing-observability-with-prometheus/introducing-observability-with-prometheus-example1-2.png)
 
 Notice how some metrics is missing when usual metric scrapping flow doesn’t work.
 
 ### Example 2:
 
-Querying pg_stat_user_tables_last_autovacuum to know when was the last auto vacuum was run:
+Querying pg_stat_user_tables_last_autovacuum to know when was the last auto vacuum was run in unix time:
 
-![example-2](/assets/images/introducing-observability-with-prometheus/introducing-observability-with-prometheus-example2.png)
+[![example-2](/assets/images/introducing-observability-with-prometheus/introducing-observability-with-prometheus-example2.png)](/assets/images/introducing-observability-with-prometheus/introducing-observability-with-prometheus-example2.png)
 
 By not specifying the labels, prometheus return all values possible.
 
-Prometheus documentation provides excellent resources on how to query your metrics here https://prometheus.io/docs/introduction/overview/.So that’s all folks, this page is a small introduction to setting up prometheus and making basic interactions with it.
+Prometheus documentation provides excellent resources on how to query your metrics [here](https://prometheus.io/docs/introduction/overview/).
+
+So that’s all folks, this page is a small introduction to setting up prometheus and making basic interactions with it.
