@@ -4,8 +4,8 @@ excerpt_separator: "<!--more-->"
 categories:
   - Blog
 tags:
-  - OpenAPI
-  - SpringBoot
+  - openapi
+  - springboot
 ---
 
 OpenAPI Specification is a good way to define and describe your API for anyone who is interested in using your apis. So, I found a couple of open source implementation options on the internet:  

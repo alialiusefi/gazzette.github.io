@@ -5,13 +5,13 @@ categories:
   - Blog
 toc: true
 tags:
-  - PHP
-  - Kotlin
-  - Java
-  - SpringBoot
-  - Concurrency
-  - Consistency
-  - Streaming
+  - php
+  - kotlin
+  - java
+  - springboot
+  - concurrency
+  - consistency
+  - streaming
 ---
 
 A while back, I was tasked to look into the problem of disappearing events in a streaming pipeline. The stakeholders complained of the data/status not being updated.
