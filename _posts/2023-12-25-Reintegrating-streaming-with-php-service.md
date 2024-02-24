@@ -12,6 +12,7 @@ tags:
   - concurrency
   - consistency
   - streaming
+  - star
 ---
 
 A while back, I was tasked to look into the problem of disappearing events in a streaming pipeline. The stakeholders complained of the data/status not being updated.
