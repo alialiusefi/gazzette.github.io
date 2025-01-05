@@ -1,5 +1,5 @@
 ---
-title: "Implementing binary heap"
+title: "Implementing Binary heap"
 excerpt_separator: "<!--more-->"
 categories:
   - Blog
@@ -12,8 +12,6 @@ tags:
   - binaryheap
 ---
 
-
-# Implementing Binary Heap
 
 ## Overview
 
