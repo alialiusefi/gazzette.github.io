@@ -1,5 +1,5 @@
 ---
-title: "Implementing Binary heap"
+title: "Implementing binary heap"
 excerpt_separator: "<!--more-->"
 categories:
   - Blog
