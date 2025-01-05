@@ -233,6 +233,10 @@ Heaps handle duplicates by inserting them in the order they are added. You can a
 
 Full code can be accessed [here](/assets/code/implementing-binary-heap/Solution.java). It's not fully tested, use at your own risk.
 
+## Iterating through a heap, to get an ordered list
+
+A good usage of binary heap is to eventually get an ordered list of elements by removing the root node until its empty. Resulting in what is called a heapsort.
+
 
 ## Resources
 
