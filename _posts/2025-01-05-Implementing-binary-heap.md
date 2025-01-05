@@ -10,6 +10,7 @@ tags:
   - java
   - dsa
   - binaryheap
+  - heapsort
 ---
 
 
