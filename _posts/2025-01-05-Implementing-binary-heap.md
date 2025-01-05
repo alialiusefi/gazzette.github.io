@@ -201,8 +201,8 @@ To remove an element from the heap:
 
 ### 6. **search(element)**
 
-- Searching for an element in the heap takes `O(n)` time.
-- Better yet, you can traverse the tree structure optimally by skipping branches that will not lead to the element. `O(log(n))`
+- Searching for an element in the heap takes `O(n)` time, by scanning the array.
+- Better yet, you can traverse the tree structure by skipping branches that will not lead to the element. 
 
 ```Java
 int search(int a) {
