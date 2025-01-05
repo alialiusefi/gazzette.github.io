@@ -201,6 +201,7 @@ To remove an element from the heap:
 
 - Searching for an element in the heap takes `O(n)` time, by scanning the array.
 - Better yet, you can traverse the tree structure by skipping branches that will not lead to the element. 
+- Since this is not a binary search tree, we cannot guarantee that node exists at either in left or in right subtree, so the algorithm needs to visit both subtrees. Therefore, the worst time complexity for this operation is `O(n)`.
 
 ```Java
 int search(int a) {
