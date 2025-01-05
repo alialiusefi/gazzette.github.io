@@ -25,11 +25,11 @@ public class Solution {
                     return head;
                 }
                 int leftIdx = (2 * head) + 1;
-                if (leftIdx < this.array.size()) {
+                if (leftIdx < this.array.size() && this.array.get(leftIdx) >= a) {
                     queue.add(leftIdx);
                 }
                 int rightIdx = (2 * head) + 2;
-                if (rightIdx < this.array.size()) {
+                if (rightIdx < this.array.size() && this.array.get(rightIdx) >= a) {
                     queue.add(rightIdx);
                 }
             }
