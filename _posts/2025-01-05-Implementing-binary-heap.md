@@ -232,7 +232,6 @@ int search(int a) {
 
 Heaps handle duplicates by inserting them in the order they are added. You can also customize the heap behavior by using a **comparator**, which allows you to define a custom order.
 
-Full code can be accessed [here](/assets/code/implementing-binary-heap/Solution.java). It's not fully tested, use at your own risk.
 
 ## Iterating through a heap, to get an ordered list
 
@@ -243,5 +242,6 @@ A good usage of binary heap is to eventually get an ordered list of elements by 
 
 1. [Educative - Data Structure Heaps Guide](https://www.educative.io/blog/data-structure-heaps-guide)
 2. [Wikipedia - Binary Heap](https://en.wikipedia.org/wiki/Binary_heap)
+3. Full code can be accessed [here](/assets/code/implementing-binary-heap/Solution.java). It's not fully tested, use at your own risk.
 
 --- 

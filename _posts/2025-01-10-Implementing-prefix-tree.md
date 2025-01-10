@@ -17,8 +17,8 @@ tags:
 
 ## Introduction:
 
-A prefix trie is a tree data structure that stores strings of text. The nodes of the tree are actually the elements of the alphabet used tocreate a string. Since its a tree, it contains a root which is actually computed since a start of the string varies.
-So, actually we have multiple roots that can be up to len(alphabet) in size. A map of character -> root is suited to point to which root tothe start of the word.
+A prefix trie is a tree data structure that stores strings that is prefix searchable. The nodes of the tree are actually the elements of the alphabet used to create a string. Since its a tree, it contains a root which is actually computed since a start of the string varies.
+So, actually we have multiple roots that can be up to `len(alphabet)` in size. At start, a map of `character -> node` is suited to point to which root to the start of the word.
 
 ### Tree Representation:
 
@@ -59,7 +59,8 @@ static class Node {
 }
 ```
 The boolean flag is an identifier if the node is the final character of a word. 
-As mentioned earlier, the PrefixTree has a root node with empty value. So the structure is simply the following:
+As mentioned earlier, the `PrefixTree` has a root node with empty value. So the structure is simply the following:
+
 ```java
 static class PrefixTree {
     static class Pair {
@@ -114,7 +115,7 @@ void insert(String word) {
 }
 ```
 The above operation insert a word by add the sequence of characters if they doesnt exist, otherwise it marks final character as true.
-Since we traverse the word by its characters, the time complexity is O(len(word)).
+Since we traverse the word by its characters, the time complexity is `O(len(word))`.
 
 ### 2. search(word)
 ```java
@@ -135,7 +136,7 @@ Optional<Node> search(String word) {
     return Optional.empty();
 }
 ```
-Despite the name of the function named as `search`, it only returns the last node of the word. The way its implemented above is O(le(word)) operation. and that is okay. This is a function that will be used in other operations such as prefixSearch(...). For exact search,it can be optimized.
+Despite the name of the function named as `search`, it only returns the last node of the word. The way its implemented above is` O(len(word))` operation. and that is okay. This is a function that will be used in other operations such as `prefixSearch`. For exact search,it can be optimized.
 
 ### 3. contains(word)
 
@@ -150,7 +151,7 @@ boolean containsWord(String word) {
 }
 ```
 This is an operation that will use the `search` function to get the last node to then check if its a word or not to satisfy the exactmatching.
-This can be optimized to O(1) time complexity using a hash table with space tradeoff of `len(words)`.
+This can be optimized to `O(1)` time complexity using a hash table with space tradeoff of `len(words)`.
 
 ### 4. prefixSearch(prefix)
 ```java
@@ -178,10 +179,10 @@ List<String> prefixSearch(String prefix) {
 }
 
 ```
-The above operation uses the `search` operation, which returns the last node of the prefix, by having access to the last node, we can thensearch for all the words with the same prefix. Using BFS, where the lastNode is the rootNode, we start to search for nodes with `isWord == true` while remembering our traversing. Pair structure mentioned in intorduction is used to support that.
+The above operation uses the `search` operation, which returns the last node of the prefix. So, by having access to the last node, we can then search for all the words with the same prefix. Using BFS, where the `lastNode` is the root node, we start to search for nodes with `isWord == true` while remembering our traversing. Pair structure mentioned in intorduction is used to support that.
 
 ## Resources:
-1. The full code can be access [here](Solution.java). It is not tested, so use on your own risk.
+1. The full code can be access [here](/assets/code/implementing-prefix-trie/Solution.java). It is not tested, so use on your own risk.
 2. https://en.wikipedia.org/wiki/Trie
 
 ## Todo:
